@@ -21,6 +21,16 @@ def chooseCave():
     return cave
 
 
+def sell_or_go():
+    """Spend money or go home"""
+    print('Would you like to sell your treasure or go home? (s or g)')
+    to_sell_or_go = input()
+    if  to_sell_or_go.lower() == 's':
+        print('You sell all your treasure and become a zillionare')
+    if to_sell_or_go.lower() == 'g':
+        print('You go home, remembering the grand adventure you had.')
+
+
 def checkCave(chosenCave):
     print("You approach the cave...")
     time.sleep(2)
@@ -34,6 +44,7 @@ def checkCave(chosenCave):
 
     if chosenCave == str(friendlyCave):
         print("Gives you his treasure")
+        sell_or_go()
     else:
         print("Gobbles you down in one bite!")
 
